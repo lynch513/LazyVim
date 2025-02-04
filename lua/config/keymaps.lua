@@ -9,9 +9,9 @@ vim.keymap.set("i", "jk", "<ESC>", opts)
 vim.keymap.set("i", "ол", "<ESC>", opts)
 
 vim.keymap.set("n", "<leader>tw", function()
-  line_wrapping_flag = not line_wrapping_flag
+  Line_wrapping_flag = not Line_wrapping_flag
 
-  if line_wrapping_flag then
+  if Line_wrapping_flag then
     vim.o.wrap = true
   else
     vim.o.wrap = false
@@ -55,3 +55,12 @@ vim.keymap.set("n", "<leader>fr", function()
     print("\nInvalid choice or canceled")
   end
 end, { desc = "Reopen file with selected encoding" })
+
+-- Buffers
+-- vim.keymap.set('n', '<Tab>', ':bnext<CR>', opts)
+-- vim.keymap.set('n', '<S-Tab>', ':bprevious<CR>', opts)
+vim.keymap.set("n", "]t", ":bnext<CR>", { desc = "Go to next buffer" })
+vim.keymap.set("n", "[t", ":bprevious<CR>", { desc = "Go to previous buffer" })
+
+-- Keymap for neo-tree
+vim.keymap.set("n", "<leader>e", "<cmd>Neotree float reveal<CR>", { silent = true, desc = "Explorer Neotree" })
