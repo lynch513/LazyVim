@@ -13,6 +13,12 @@ vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
 vim.opt.list = true
 vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
 
+-- Creates a swapfile
+vim.o.swapfile = false
+
+-- Always show tabs
+vim.o.showtabline = 2
+
 -- Spell check
 vim.opt.spell = true
 vim.opt.spelllang = { "en", "ru" }
