@@ -9,15 +9,35 @@ vim.opt.fileencodings = "utf-8,cp1251,koi8-r"
 vim.opt.list = true
 vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
 
--- Sets how neovim will display certain whitespace characters in the editor.
-vim.opt.list = true
-vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
-
 -- Creates a swapfile
 vim.o.swapfile = false
 
 -- Always show tabs
 vim.o.showtabline = 2
+
+-- Wrap long line
+vim.o.wrap = false
+
+-- Companion to wrap don't split words
+vim.o.linebreak = true
+
+-- Set number column width {default 4}
+vim.o.numberwidth = 4
+
+-- The number of spaces inserted for each indentation
+vim.o.shiftwidth = 4
+
+-- Insert n spaces for a tab
+vim.o.tabstop = 4
+
+-- Number of spaces that a tab counts for while performing editing operations
+vim.o.softtabstop = 4
+
+-- Convert tabs to spaces
+vim.o.expandtab = true
+
+-- Allow backspace on
+vim.o.backspace = "indent,eol,start"
 
 -- Spell check
 vim.opt.spell = true
